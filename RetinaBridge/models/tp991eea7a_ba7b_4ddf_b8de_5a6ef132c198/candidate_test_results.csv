@@ -1,0 +1,2 @@
+TestImages,AccuracyPercent,SensitivityPercent,SpecificityPercent,TP,TN,FP,FN
+548,82.4817518248175,90.1345291479821,95.0769230769231,201,309,16,22
