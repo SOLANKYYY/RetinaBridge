@@ -15,10 +15,8 @@ app = Flask(__name__, static_folder=None)
 app.config['MAX_CONTENT_LENGTH'] = 15 * 1024 * 1024
 LOCK = threading.Lock()
 predictor = Predictor()
-PASSWORD = os.environ.get('DEMO_PASSWORD', '')
+PASSWORD = ''  # Public demonstration: no password required.
 PUBLIC_ORIGIN = os.environ.get('PUBLIC_ORIGIN', '').rstrip('/')
-if os.environ.get('RENDER') and not PASSWORD:
-    raise RuntimeError('Set DEMO_PASSWORD before deploying the demonstration.')
 
 @app.before_request
 def access():
